@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <!-- tailwind css + daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+     rel="stylesheet">
+     <style>
+        *{
+            font-family: "Inter", sans-serif;
+        }
+     </style>
+</head>
+<body class="bg-base-200 ">
+    <header class="w-11/12 px-2 py-6  mx-auto">
+        <h1 class="text-3xl font-extrabold tracking-tight text-navy">Job Application Tracker</h1>
+    </header>
+    <section class=" mx-auto">
+        <div class="w-11/12 grid grid-cols-3 gap-4 mx-auto py-5">
+            <div class="card bg-white rounded-2xl card-sm shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-xl">Total</h2>
+                    <p class="text-xl font-bold">8</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-2xl card-sm shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-xl ">Interview</h2>
+                    <p class="text-success text-xl font-bold">0</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-2xl card-sm shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-xl">Rejected</h2>
+                    <p class="text-red-700 text-xl font-bold">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="border-slate-400 mb-6">
+    <section class="w-11/12 mx-auto">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-5">
+            <h2 class="text-xl font-bold">Available Jobs</h2>
+            <span class="text-sm text-slate-600 font-medium"><span>8</span>jobs</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <button class="px-5 py-2 rounded-full border-2 text-sm font-medium 
+            cursor-pointer transition-all duration-200">All</button>
+            <button class="px-5 py-2 rounded-full border-2 text-sm font-medium 
+            cursor-pointer transition-all duration-200">Interview</button>
+            <button class="px-5 py-2 rounded-full border-2 text-sm font-medium 
+            cursor-pointer transition-all duration-200">Rejected</button>
+        </div>
+    </section>
+    <section id="jobs-container" class="w-11/12 mx-auto flex flex-col gap-4">
+        <div>
+            <div class="card bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg
+            hover:-translate-y-0.5 transition-all duration-200 animate-fadeup">
+                <div class="flex justify-between items-start gap-4">
+                    <div class="flex-1 min-w-0">
+                        <p class="font-bold mb-0.5">Mobile First Corp</p>
+                        <p class="text-sm text-slate-500 mb-1.5">React Native Developer</p>
+                        <p class="text-xs text-slate-400 mb-3">
+                            <span>Remote</span>
+                            <span class="mx-1.5 text-slate-300">.</span>
+                            <span>Full-time</span>
+                            <span class="mx-1.5 text-slate-300">.</span>
+                            <span>$130,000 - $175,000</span>
+                        </p>
+                        <div class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase
+                         px-3 py-1 rounded-full bg-slate-200 text-slate-500">Not Applied
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed mb-4">Build cross platform mobile 
+                            application using React Native. Work on products used by millions of users worldwide.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent 
+                                cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white">Interview</button>
+                                <button class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent 
+                                cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white">Rejected</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
