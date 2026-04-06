@@ -35,4 +35,41 @@ function switchTab(tab){
     }
 
 }
+
+// stat update
+const statTotal = document.getElementById("stat-total");
+const statInterview = document.getElementById("stat-interview");
+const statReject = document.getElementById("stat-reject");
+
 switchTab(currentTab);
+
+document.getElementById("jobs-container").addEventListener("click", function(event){
+    const clickedElement = event.target;
+    const card = clickedElement.closest (".card");
+     const parent = card.parentNode;
+    const state = card.querySelector (".state");
+   
+
+    if (clickedElement.classList.contains("interview")){
+        state.innerText = "Interviewed";
+        interviewContainer.appendChild(card);
+        updateStat();
+    }
+    if (clickedElement.classList.contains("rejected")){
+        state.innerText = "Rejected";
+        rejectContainer.appendChild(card);
+        updateStat();
+    }
+    if (clickedElement.classList.contains("delete")){
+        parent.removeChild(card);
+        updateStat();
+    }
+})
+
+function updateStat(){
+    statTotal.innerText = allContainer.children.length;
+    statInterview.innerText = interviewContainer.children.length;
+    statReject.innerText = rejectContainer.children.length;
+}
+
+updateStat();
