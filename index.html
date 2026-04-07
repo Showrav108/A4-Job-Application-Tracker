@@ -31,7 +31,7 @@
             <div class="card bg-white rounded-2xl card-sm shadow-sm">
                 <div class="card-body">
                     <h2 class="card-title text-xl">Total</h2>
-                    <p class="text-xl font-bold" id="stat-total">8</p>
+                    <p class="text-xl font-bold" id="stat-total">0</p>
                 </div>
             </div>
             <div class="card bg-white rounded-2xl card-sm shadow-sm">
@@ -52,7 +52,7 @@
     <section class="w-11/12 mx-auto">
         <div class="flex items-center justify-between flex-wrap gap-2 mb-5">
             <h2 class="text-xl font-bold">Available Jobs</h2>
-            <span class="text-sm text-slate-600 font-medium"><span>8</span>jobs</span>
+            <span class="text-sm text-slate-600 font-medium"><span id="available">8</span> jobs</span>
         </div>
         <div class="flex flex-wrap gap-2 mb-4">
             <button id="tab-all" onclick="switchTab('all')" class="px-5 py-2 rounded-full border-2 text-sm 
@@ -315,9 +315,10 @@
                 </div>
             </div>
         </div>
+        <section class="hidden w-11/12 mx-auto flex flex-col gap-4" id="interview-container"></section>
+        <section class="hidden w-11/12 mx-auto flex flex-col gap-4" id="reject-container"></section>
     </section>
-    <section class="hidden" id="interview-container">Interview Section</section>
-    <section class="hidden" id="reject-container">Reject Section</section>
+    
 
     <!-- empty state -->
     <div id="empty-state" class="hidden flex-col items-center justify-center py-20 gap-4 text-center">
